@@ -8,9 +8,7 @@ Fork this repo and clone it. Then work by creating branches and sending pull req
 <br>
 <p>You can view the functions/methods which we are going to create and get an idea about them from here -> https://www.geeksforgeeks.org/cpp/forward-list-c-set-1-introduction-important-functions/ </p>
 <p>For more information you can refer to -> http://en.cppreference.com/w/cpp/container/forward_list.html</p>
-
-<p>Not yet completed</p>  
-
 <br>
-
 <p>this material is also useful --> https://cds.iisc.ac.in/wp-content/uploads/DS286.AUG2016.Lab2_.cpp_tutorial.pdf</p>  
+<br>
+<p>Not yet completed</p>  
