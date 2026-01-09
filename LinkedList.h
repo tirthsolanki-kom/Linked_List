@@ -7,19 +7,24 @@ struct Node {
     Node* next;
 };
 
-// Linked List class
 class LinkedList {
 private:
-    Node* head; 
+    Node* head;
 
 public:
-    LinkedList();                 
-    ~LinkedList();
-    void insert(int val);
-    bool isEmpty();               
+    // Constructor
+    LinkedList();
+    ~LinkedList();  
+    // Function to check if empty
+    bool isEmpty();
+
+    void insert(int val, int pos); // Custom function to insert anywhere
+
+    void display();
+         
     void update(int oldVal, int newVal); 
-    void remove(int val);         
-    void display();               
+  
+    void remove(int val);
 };
 
 #endif
