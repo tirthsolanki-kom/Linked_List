@@ -11,10 +11,16 @@ Fork this repo and clone it. Then work by creating branches and sending pull req
 <br>
 <p>this material is also useful --> https://cds.iisc.ac.in/wp-content/uploads/DS286.AUG2016.Lab2_.cpp_tutorial.pdf</p>  
 <br>
-<p>Current features:
+<p>Current features:</p>
+<br>
 1. Check if list is empty
+<br>
 2. Traversing the list
+<br>
 3. Inserting an element at a particular position
+<br>
 4. Updating value
-5. Removing value</p>
+<br>
+5. Removing value
+<br>
 <p>Not yet completed</p>  
