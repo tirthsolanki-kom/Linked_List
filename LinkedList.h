@@ -1,6 +1,7 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
+// Node structure
 struct Node {
     int data;
     Node* next;
@@ -13,13 +14,17 @@ private:
 public:
     // Constructor
     LinkedList();
-    
+    ~LinkedList();  
     // Function to check if empty
     bool isEmpty();
 
     void insert(int val, int pos); // Custom function to insert anywhere
 
     void display();
+         
+    void update(int oldVal, int newVal); 
+  
+    void remove(int val);
 };
 
 #endif

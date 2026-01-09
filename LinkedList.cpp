@@ -48,3 +48,43 @@ void LinkedList::display() {
     }
     std::cout << "NULL" << std::endl;
 }
+
+void LinkedList::remove(int val) {
+	Node* cur = head;
+	Node* prev = nullptr;
+	while (cur) {
+		if (cur->data == val) {
+			Node* toDelete = cur;
+			if (prev)
+				prev->next = cur->next;
+			else
+				head = cur->next;
+			cur = cur->next;
+			delete toDelete;
+		} else {
+			prev = cur;
+			cur = cur->next;
+		}
+	}
+}
+
+void LinkedList::update(int oldVal, int newVal) {
+	Node* cur = head;
+	while (cur) {
+		if (cur->data == oldVal) {
+			cur->data = newVal;
+		}
+		cur = cur->next;
+	}
+}
+
+// Destructor to free nodes
+LinkedList::~LinkedList() {
+	Node* cur = head;
+	while (cur) {
+		Node* next = cur->next;
+		delete cur;
+		cur = next;
+	}
+}
+
