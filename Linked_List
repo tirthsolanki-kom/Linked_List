@@ -7,13 +7,46 @@ struct Node {
     Node* next;
 };
 
+// Function to display (access) elements
+void display(Node* head) {
+    Node* temp = head;
+    cout << "Linked list elements: ";
+    while (temp != NULL) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+}
+
+// Function to search an element
+bool search(Node* head, int key) {
+    Node* temp = head;
+    while (temp != NULL) {
+        if (temp->data == key)
+            return true;
+        temp = temp->next;
+    }
+    return false;
+}
+
+// Function to find size of linked list
+int size(Node* head) {
+    int count = 0;
+    Node* temp = head;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+
 int main() {
-    // Creating nodes
+    // Creating linked list: 10 -> 20 -> 30 -> 40
     Node* head = new Node();
     Node* second = new Node();
     Node* third = new Node();
+    Node* fourth = new Node();
 
-    // Assigning data
     head->data = 10;
     head->next = second;
 
@@ -21,16 +54,27 @@ int main() {
     second->next = third;
 
     third->data = 30;
-    third->next = NULL;
+    third->next = fourth;
 
-    // Accessing elements (traversal)
-    Node* temp = head;
-    cout << "Linked List elements are: ";
+    fourth->data = 40;
+    fourth->next = NULL;
 
-    while (temp != NULL) {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
+    // Access elements
+    display(head);
+
+    // Find size
+    cout << "Size of linked list: " << size(head) << endl;
+
+    // Search element
+    int key;
+    cout << "Enter element to search: ";
+    cin >> key;
+
+    if (search(head, key))
+        cout << "Element found in the linked list";
+    else
+        cout << "Element not found in the linked list";
 
     return 0;
 }
+
